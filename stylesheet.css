@@ -1,0 +1,275 @@
+:root {
+    --lightRed: #FF877D;
+    --darkRed: #D34E59;
+    --darkestRed: #B42D38;
+    --lightTan: #FDF6F7;
+    --brightRed: #CC3541;
+
+    --outlineColor: var(--lightRed);
+    --outlineSize: 3px;
+    --outlineSizeNegative: calc(var(--outlineSize) * -1);
+    --backgroundColor: white;
+
+    --navBarHeight: 10vh;
+    --logoHeight: 4.5vh;
+
+    --buttonHeight: 10vh;
+    --buttonWidth: calc(var(--buttonHeight) * 2.4);
+}
+
+@font-face {
+    font-family: "Jimmy Script";
+    src: url("JimmyScript.otf") format("opentype");
+}
+
+html {
+    background-color: var(--darkRed);
+}
+
+body {
+    margin: 0;
+    font-family: "Jost", sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+ }
+
+.redOutline {
+    font-size: 128px;
+    font-family:'Playfair Display',serif;
+    color: transparent;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 4px var(--lightRed)
+    /*text-shadow:*/
+    /*        var(--outlineSizeNegative) var(--outlineSizeNegative) 0 var(--outlineColor),*/
+    /*        var(--outlineSize) var(--outlineSizeNegative) 0 var(--outlineColor),*/
+    /*        var(--outlineSizeNegative) var(--outlineSize) 0 var(--outlineColor),*/
+    /*        var(--outlineSize) var(--outlineSize) 0 var(--outlineColor);*/
+}
+
+svg {
+    height: 25vh;
+    width: 100%;
+}
+
+.firstImg {
+    width: 100%;
+    height: auto;
+}
+
+.lastImg {
+    width: 100%;
+    height: auto;
+    max-height:57vh;
+}
+
+/*Custom Classes*/
+.VSection {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.HSection {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flameImage {
+    height: 35vh;
+    width: auto;
+}
+
+/*Custom Flex Classes*/
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.spaceAround {
+    justify-content: space-around;
+}
+
+/*Custom Color Classes*/
+.lightRed {
+    background-color: var(--lightRed);
+}
+
+.darkRed {
+    background-color: var(--darkRed);
+}
+
+.darkestRed {
+    background-color: var(--darkestRed);
+}
+
+.brightRed {
+    background-color: var(--brightRed);
+}
+
+.lightTan {
+    background-color: var(--lightTan);
+}
+
+.whiteToNoneGradient {
+    width: 100%;
+    height: 100%;
+    fill: linear-gradient(0deg, #FDF6F7 0%, rgba(255, 255, 255, 0.00) 49.84%);
+}
+
+.redToDarkRedGradient {
+    background: linear-gradient(0deg, rgba(207, 77, 85, 0.00) 0%, #812028 100%);
+}
+
+/*Div elements for multilayer*/
+.imageContainer {
+    position: relative;
+    width: 100%;
+}
+
+.imageContainer img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.whiteGradientOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%; /* Adjust gradient height as needed */
+    background: linear-gradient(0deg, var(--lightTan) 0%, rgba(255, 255, 255, 0.00) 49.84%);
+}
+
+/*Custom buttons for section two*/
+.custom-button {
+    background-color: var(--darkRed); /* Green */
+    width: var(--buttonWidth);
+    height: var(--buttonHeight);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    /*The text inside button*/
+    color: white;
+    font-family: "Jost", sans-serif;
+    font-size: 3.7vh;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+}
+
+/*Changes button color on hover*/
+.custom-button:hover {
+    background-color: var(--darkestRed);
+}
+
+/*Triangle Section stuff*/
+
+.triangle {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navBar {
+    height: var(--navBarHeight);
+    padding: 0;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 1;
+
+
+}
+
+.navBar .left {
+    display: flex;
+    flex-direction: row;
+}
+
+.navBar .right {
+    float: right;
+}
+
+.navBar img {
+    padding: 10px 10px 10px 10px;
+    max-height: var(--logoHeight);
+    width: auto;
+}
+
+.navBar button {
+    background-color: transparent; /* Change to transparent */
+    width: calc(var(--navBarHeight));
+    height: var(--navBarHeight);
+
+    /*Display text inside*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    /*The text inside button*/
+    color: white;
+    font-family: "Jost", sans-serif;
+    font-size: 2.5vh;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.navBar button:hover {
+    background-color: white;
+    color: var(--darkestRed);
+}
+
+/*Remove blue lines from links*/
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+/*Tithely Image*/
+.tithelyImage {
+    width: 35%;
+    height: auto;
+    padding: 20px;
+    max-height: 39vh;
+    max-width: 39vh;
+}
