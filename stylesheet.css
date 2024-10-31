@@ -278,7 +278,9 @@ a:active {
 .video-container {
     max-width: 800px;
     margin: 20vh auto 0;
-    background-color: #fff;
+    background-color: var(--lightTan);
+    color: white;
+    /* Makes it a rounded rect*/
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -287,7 +289,7 @@ a:active {
     padding: 16px;
     font-size: 1.2em;
     font-weight: bold;
-    background-color: #f0f0f0;
+    background-color: var(--lightRed);
 }
 .video-embed {
     position: relative;
