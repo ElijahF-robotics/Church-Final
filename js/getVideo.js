@@ -13,7 +13,8 @@ async function getPrivateKey() {
 
 // Get the latest video and update the webpage
 async function fetchLatestVideo() {
-    const accessToken = await getPrivateKey();
+    // const accessToken = await getPrivateKey();
+    const accessToken = 'EAAPXi3xX7dMBOZC7LwqRfZBPiNCgcy5924UE1nWKOyvN95Bv7r7HQ8R3BRwUeZBOt8evfGq20EDi5ssCWdpuZBHwS83swUVOvx1P0PDO4pxvk9Xj22U0i1iF6nYRYDJE6IQAozZB3q7AhuqyQDThZAZBbSf0BOMDFxJiDuWfSEZCNjkkshcPNcH23fFC7giv';
     console.log(accessToken);
 
     try {
