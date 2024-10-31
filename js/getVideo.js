@@ -3,7 +3,9 @@ const videoContainer = document.getElementById('videoContainer');
 
 // Function to pull the access token from the api
 async function getPrivateKey() {
-    const response = await fetch('http://127.0.0.1:5000/getPrivateKey');
+    const response = await fetch('http://127.0.0.1:5000/getPrivateKey', {
+        mode: 'cors'
+    });
     const data = await response.json();
     console.log("DATA", data);
     return data.private_key;
