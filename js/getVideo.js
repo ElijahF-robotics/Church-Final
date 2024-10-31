@@ -15,15 +15,10 @@ async function getPrivateKey() {
 async function fetchLatestVideo() {
     // const accessToken = await getPrivateKey();
     const accessToken = 'EAAPXi3xX7dMBOZC7LwqRfZBPiNCgcy5924UE1nWKOyvN95Bv7r7HQ8R3BRwUeZBOt8evfGq20EDi5ssCWdpuZBHwS83swUVOvx1P0PDO4pxvk9Xj22U0i1iF6nYRYDJE6IQAozZB3q7AhuqyQDThZAZBbSf0BOMDFxJiDuWfSEZCNjkkshcPNcH23fFC7giv';
-    console.log(accessToken);
 
     try {
         const response = await fetch(`https://graph.facebook.com/v21.0/${pageId}/live_videos?access_token=${accessToken}&fields=embed_html,title,description&limit=1`);
         const data = await response.json();
-
-        console.log(data);
-
-        console.log(response);
 
         if (data.data && data.data.length > 0) {
             const video = data.data[0];
