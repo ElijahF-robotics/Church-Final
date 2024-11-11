@@ -3,18 +3,15 @@ const videoContainer = document.getElementById('videoContainer');
 
 // Function to pull the access token from the api
 async function getPrivateKey() {
-    const response = await fetch('http://127.0.0.1:5000/getPrivateKey', {
-        mode: 'cors'
-    });
+    const response = await fetch('https://ec2-3-133-104-29.us-east-2.compute.amazonaws.com/getPrivateKey', {});
     const data = await response.json();
-    console.log("DATA", data);
+    console.log("Got Private Key");
     return data.private_key;
 }
 
 // Get the latest video and update the webpage
 async function fetchLatestVideo() {
-    // const accessToken = await getPrivateKey();
-    const accessToken = 'EAAPXi3xX7dMBOZC7LwqRfZBPiNCgcy5924UE1nWKOyvN95Bv7r7HQ8R3BRwUeZBOt8evfGq20EDi5ssCWdpuZBHwS83swUVOvx1P0PDO4pxvk9Xj22U0i1iF6nYRYDJE6IQAozZB3q7AhuqyQDThZAZBbSf0BOMDFxJiDuWfSEZCNjkkshcPNcH23fFC7giv';
+    const accessToken = await getPrivateKey();
 
     try {
         const response = await fetch(`https://graph.facebook.com/v21.0/${pageId}/live_videos?access_token=${accessToken}&fields=embed_html,title,description&limit=1`);
