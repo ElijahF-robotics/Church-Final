@@ -316,6 +316,7 @@ a:active {
     color: #666;
 }
 .linkbutton::after {
-    content: link("svg/link-out-arrow.svg");
+    content: url("svg/link-out-arrow.svg");
     padding: 5px;
+	/* no easy way to resize image? */
 }
