@@ -315,7 +315,7 @@ a:active {
     font-style: italic;
     color: #666;
 }
-.linkbutton:after {
+.linkbutton::after {
     content: link("svg/link-out-arrow.svg");
     padding: 5px;
 }
