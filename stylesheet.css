@@ -317,6 +317,6 @@ a:active {
 }
 .linkbutton::after {
     content: url("svg/link-out-arrow.svg");
-    padding: 5px;
+    padding-left: 5px;
 	/* no easy way to resize image? */
 }
