@@ -17,11 +17,6 @@
     --buttonWidth: calc(var(--buttonHeight) * 2.4);
 }
 
-@font-face {
-    font-family: "Jimmy Script";
-    src: url("JimmyScript.otf") format("opentype");
-}
-
 html {
     background-color: var(--darkRed);
 }
@@ -314,4 +309,17 @@ a:active {
     padding: 20px;
     font-style: italic;
     color: #666;
+}
+
+/*Collage Image*/
+.collageImage {
+    width: 50%;
+    height: 100%;
+}
+
+.pastorImage {
+    width: 75%;
+    height: auto;
+    padding: 20px;
+    border-radius: 45px;
 }
