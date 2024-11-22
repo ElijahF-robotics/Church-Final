@@ -315,10 +315,17 @@ a:active {
     font-style: italic;
     color: #666;
 }
+
+/*Link button share*/
 .linkbutton::after {
     content: url("svg/link-out-arrow.svg");
     padding-left: 2px;
 	position: relative;
 	top: 2px;
 	/* no easy way to resize image? */
+}
+
+/*Maps*/
+.map {
+    border: 10px double var(--lightRed);
 }
