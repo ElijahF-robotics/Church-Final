@@ -11,5 +11,6 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="give" level="application" />
     <orderEntry type="library" name="sdk" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>

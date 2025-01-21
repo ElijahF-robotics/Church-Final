@@ -323,6 +323,7 @@ a:active {
 /*Maps*/
 .map {
     border: 10px double var(--lightRed);
+}
   
 /*Collage Image*/
 .collageImage {

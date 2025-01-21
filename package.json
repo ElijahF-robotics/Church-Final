@@ -1,0 +1,17 @@
+{
+  "name": "church-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElijahF-robotics/Church-Final.git"
+  },
+  "private": true,
+  "dependencies": {
+    "undici": "^7.1.0"
+  }
+}
