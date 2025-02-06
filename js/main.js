@@ -16,9 +16,6 @@ $(document).ready(function() {
             navBar.addClass('redToDarkRedGradient');
 
         }
-
-        console.log(scrollTop)
-
     });
 });
 
