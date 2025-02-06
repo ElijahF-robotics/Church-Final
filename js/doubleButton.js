@@ -12,7 +12,7 @@ let desktopCode = "<img id=\"image\" src=\"img/FlameInCircle.png\" class=\"flame
 
 // If on mobile
 if (/Mobi|Android/i.test(navigator.userAgent)) {
-    document.getElementById("doubleButton").innterHTML = mobileCode
+    document.getElementById("doubleButton").innerHTML = mobileCode
 } else {    // Else if on desktop
     document.getElementById("doubleButton").innerHTML = desktopCode;
 }
