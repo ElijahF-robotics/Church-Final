@@ -3,22 +3,22 @@
       xmlns:-webkit-text-stroke-width="http://www.w3.org/1999/xhtml" xmlns:outline-color="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
+<!--    This is for the responsive stuff-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Touchpoint Pentecostals</title>
-    <link rel="stylesheet" type="text/css"
-          media="(max-device-width: 480px)"
-          href="mobile/stylesheet.css" />
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        // JavaScript code for redirection
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-            window.location.href = "/mobile/index.html";
-        }
-    </script>
+<!--    <script>-->
+<!--        // JavaScript code for redirection-->
+<!--        if (/Mobi|Android/i.test(navigator.userAgent)) {-->
+<!--            window.location.href = "/mobile/index.html";-->
+<!--        }-->
+<!--    </script>-->
 </head>
 <body>
 
@@ -39,23 +39,25 @@
 
 <!--Top Section-->
 <div class="imageContainer" style="">
-    <img src="img/firstImage.jpg" class="firstImg">
+    <picture>
+        <source media="(max-width: 768px)" srcset="img/firstImageMobile.jpg">
+        <source media="(min-width: 769px)" srcset="img/firstImage.jpg">
+        <img src="img/firstImage.jpg" alt="God's Touch at Your Point of Need">
+    </picture>
     <div class="whiteGradientOverlay"></div>
 </div>
 
 <!--Double button section-->
-<div class="HSection lightTan spaceAround" style="padding-top: 4vh">
-    <a><button class="custom-button">Watch Now</button></a>
+<div id="doubleButton" class="HSection lightTan spaceAround" style="padding-top: 4vh">
 
-    <img src="img/FlameInCircle.png" class="flameImage">
-
-    <a href="give.html"><button class="custom-button">Give</button></a>
 </div>
 
+<script src="js/doubleButton.js"></script>
+
 <!--Times section-->
-<div class="HSection lightRed spaceBetween" style="position:relative; padding-top: 0vh; padding-bottom: 0vh">
+<div id="timeSection" class="HSection lightRed spaceBetween" style="position:relative; padding-top: 0vh; padding-bottom: 0vh">
     <div class="VSection spaceBetween" style="z-index: 1">
-        <div class="VSection" style="padding:0; margin-bottom:6vh;color:white">
+        <div class="VSection" style="padding:0;color:white">
             <h1>Sunday Morning</h1>
             <p>10:00 AM - Sunday School <br>
             11:00 AM - Sunday Morning Service</p>
@@ -70,14 +72,14 @@
 </div>
 
 <!--Beliefs Section-->
-<div class="HSection brightRed spaceAround">
+<div id="beliefsSection" class="HSection brightRed spaceAround">
 
-    <div class="VSection" style="color:white;width:50%">
+    <div id="pastorImage" class="VSection" style="color:white;">
         <img src="img/pastorPhoto.JPG" class="pastorImage">
         <h1>Pastor John Worley</h1>
     </div>
 
-    <div class="VSection" style="width:50%; color:white">
+    <div id="beliefText" class="VSection" style="color:white">
         <h1>Our Faith</h1>
         <p>We believe in one God - <b>Ephesians 4:5-6</b><br><br>
             We believe Jesus is God - <b>1 Timothy 3:16</b><br><br>

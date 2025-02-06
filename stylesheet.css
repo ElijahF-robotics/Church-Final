@@ -337,3 +337,126 @@ a:active {
     padding: 20px;
     border-radius: 45px;
 }
+
+#beliefsSection #pastorImage{
+    width: 50%;
+}
+
+#beliefsSection #beliefText{
+    width: 50%;
+}
+
+#doubleButton #button1 {
+    order: -1;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust root variables for mobile */
+    :root {
+        --navBarHeight: 8vh;
+        --logoHeight: 4vh;
+        --buttonHeight: 8vh;
+        --buttonWidth: calc(var(--buttonHeight) * 2);
+    }
+
+    /* Adjust text sizes */
+    .redOutline {
+        font-size: 64px; /* Reduce the large outlined text size */
+    }
+
+    /* Adjust image sizes */
+    svg {
+        height: 20vh; /* Slightly smaller SVGs on mobile */
+    }
+
+    .flameImage {
+        height: 20vh; /* Reduce flame image size */
+    }
+
+    /* Adjust custom buttons */
+    .custom-button {
+        margin: 10px 0; /* Add some vertical spacing between stacked buttons */
+        font-size: 3vh;
+    }
+
+    /* Navbar adjustments */
+    .navBar button {
+        font-size: 2vh;
+    }
+
+    /* Image adjustments */
+    .tithelyImage {
+        width: 60%; /* Larger relative width on mobile */
+        padding: 10px;
+    }
+
+    .pastorImage {
+        width: 90%; /* Larger relative width on mobile */
+        padding: 10px;
+        border-radius: 25px; /* Slightly smaller border radius */
+    }
+
+    .collageImage {
+        width: 100%; /* Full width on mobile */
+    }
+
+    /* Video container adjustments */
+    .video-container {
+        margin: 10vh auto 0;
+        width: 100%; /* Almost full width on mobile */
+    }
+
+    /* Map adjustments */
+    .map {
+        border-width: 5px; /* Thinner border on mobile */
+        width: 95%; /* Almost full width */
+    }
+
+    /* Gradient overlay adjustment */
+    .whiteGradientOverlay {
+        height: 50%; /* Adjust gradient height for mobile */
+    }
+
+/*    Fix the second section*/
+    #doubleButton {
+        flex-direction: column;
+    }
+    #doubleButton img {
+        order: -1;
+    }
+
+/*    Fix the time section*/
+    #timeSection {
+        flex-direction: column;
+    }
+
+    #timeSection img {
+        order: -1;
+    }
+
+    #timeSection .VSection {
+        margin: 0;
+    }
+    /*Fix the beliefs section*/
+    #beliefsSection {
+        flex-direction: column;
+    }
+
+    #beliefsSection #pastorImage{
+        width: 100%;
+    }
+
+    #beliefsSection #beliefText{
+        width: 100%;
+    }
+
+/*    Get rid of the gradient on mobile*/
+    .redToDarkRedGradient {
+        background: linear-gradient(0deg, rgba(207, 77, 85, 0.00) 0%, #812028 100%);
+    }
+
+    .VSection {
+        padding: 16px;
+    }
+
+}

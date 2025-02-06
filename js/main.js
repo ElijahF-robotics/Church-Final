@@ -3,15 +3,18 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
 
-        var height = $('.imageContainer').height();
-        var scrollTop = $(window).scrollTop();
+        let height = $('.imageContainer').height();
+        let scrollTop = $(window).scrollTop();
+
+        let navBar = $('.navBar')
 
         if (scrollTop >= height) {
-            $('.navBar').removeClass('redToDarkRedGradient');
-            $('.navBar').addClass('darkestRed');
+            navBar.removeClass('redToDarkRedGradient');
+            navBar.addClass('darkestRed');
         } else {
-            $('.navBar').removeClass('darketRed');
-            $('.navBar').addClass('redToDarkRedGradient');
+            navBar.removeClass('darkestRed');
+            navBar.addClass('redToDarkRedGradient');
+
         }
 
         console.log(scrollTop)
