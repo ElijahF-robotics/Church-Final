@@ -350,6 +350,13 @@ a:active {
     order: -1;
 }
 
+/*Change map shape*/
+.roundedRectangle, .map {
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
 @media screen and (max-width: 768px) {
     /* Adjust root variables for mobile */
     :root {
@@ -457,6 +464,11 @@ a:active {
 
     .VSection {
         padding: 16px;
+    }
+
+/*    NavBar reassignment*/
+    .navBar.left {
+        display: none;
     }
 
 }
