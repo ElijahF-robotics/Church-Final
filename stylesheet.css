@@ -479,5 +479,5 @@ a:active {
 }
 
 .Footer a {
-	color: orange;
+	color: var(--lightRed);
 }
