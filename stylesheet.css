@@ -460,3 +460,12 @@ a:active {
     }
 
 }
+
+.Footer p {
+	width:50%; 
+	color:white;
+}
+
+.Footer a {
+	color: orange;
+}
