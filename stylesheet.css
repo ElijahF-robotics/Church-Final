@@ -71,7 +71,7 @@ svg {
     align-items: center;
 }
 
-.VSection>.Footer {
+.VSection .Footer {
 	margin: 0;
     padding-top: 20px;
     padding-bottom: 20px;
