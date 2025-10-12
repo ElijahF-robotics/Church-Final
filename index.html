@@ -23,7 +23,8 @@
 <body>
 
 <!--NavBar-->
-<div class="navBar HSection spaceBetween redToDarkRedGradient" style="z-index:10">
+<div class="navBar HSection spaceBetween redGlass" style="z-index:10">
+
     <div class="right">
         <img src="img/TouchpointLogoLight.png" alt="TouchPoint Pentecostals">
     </div>
@@ -52,6 +53,22 @@
 </div>
 
 <script src="js/doubleButton.js"></script>
+
+<div id="imageCarousel" class="HSection lightRed spaceBetween imageContainer" style="position:relative; padding-top: 0; padding-bottom: 0">
+    <div id="carouselTrack">
+
+    </div>
+
+    <div class="carouselButtonContainer spaceBetween">
+        <div id="prevCarouselBtn" class="redGlass circleButton">←</div>
+        <div id="nextCarouselBtn" class="redGlass circleButton">→</div>
+    </div>
+    <div id="carouselTitle" class="carouselTitleBar glass">
+        <h1>First Image</h1>
+        <p>Hi</p>
+    </div>
+
+</div>
 
 <!--Times section-->
 <div id="timeSection" class="HSection lightRed spaceBetween" style="position:relative; padding-top: 0vh; padding-bottom: 0vh">
@@ -107,5 +124,6 @@
 </body>
 
 <script src="js/main.js"></script>
+<script src="js/carousel.js"></script>
 
 </html>
