@@ -71,6 +71,17 @@ svg {
     align-items: center;
 }
 
+.VSection .Footer {
+	margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .HSection {
     margin: 0;
     padding-top: 20px;
@@ -529,9 +540,14 @@ a:active {
         padding: 16px;
     }
 
-/*    NavBar reassignment*/
-    .navBar.left {
-        display: none;
-    }
+}
+.Footer {
+	display: inline-block;
+}
+.Footer p {
+	color:white;
+}
 
+.Footer a {
+	color: var(--lightRed);
 }
