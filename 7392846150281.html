@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:-webkit-text-stroke-color="http://www.w3.org/1999/xhtml"
+      xmlns:-webkit-text-stroke-width="http://www.w3.org/1999/xhtml" xmlns:outline-color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <!--    This is for the responsive stuff-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--    <script>-->
+    <!--        // JavaScript code for redirection-->
+    <!--        if (/Mobi|Android/i.test(navigator.userAgent)) {-->
+    <!--            window.location.href = "/mobile/index.html";-->
+    <!--        }-->
+    <!--    </script>-->
+</head>
+<body>
+
+<div class = "HSection spaceAround" style="height: 100%;">
+    <div class="signupbox">
+        <h1>Sign Up!</h1>
+
+        <div class="inputForm">
+            <label for="name">Name:</label>
+            <input type="text"
+                   name="name"
+                   id="name"
+                   placeholder="John Doe">
+        </div>
+
+        <div class="inputForm">
+            <label for="email">Email:</label>
+            <input type="text"
+                   name="email"
+                   id="email"
+                   placeholder="coolemail@gmail.com">
+        </div>
+
+        <div class="inputForm">
+            <label for="phone">Phone:</label>
+            <input type="text"
+                   name="phone"
+                   id="phone"
+                   placeholder="123-456-7890">
+        </div>
+
+        <div class="inputForm">
+            <label>Children:</label>
+            <div id="childrenContainer">
+                <!-- Children inputs will go here -->
+                <div class="child-entry">
+                    <input type="text"
+                           name="children[]"
+                           placeholder="Sarah Doe"
+                           class="child-input">
+                    <button type="button" class="remove-child">Remove</button>
+                </div>
+            </div>
+            <button type="button" id="addChild">+ Add Another Child</button>
+        </div>
+
+
+        <button id="submitButton" class="custom-button" style="margin-top:20px">Submit</button>
+    </div>
+</div>
+
+
+</body>
+
+<script src="js/main.js"></script>
+<script src="js/signup.js"></script>
+
+</html>

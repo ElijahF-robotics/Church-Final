@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "airtable": "^0.12.2",
     "undici": "^7.1.0"
   }
 }

@@ -1,19 +1,25 @@
-// const AIRTABLE_TOKEN = "patE2pSe0j0oZHfEk.8fc8ef7cca07724abe6f348aa413e6b69a1e1787752c14e42bc26e1326546e5a";
-// const BASE_ID = 'your_base_id_here';
-// const TABLE_NAME = 'Carousel Images'; // Your table name
+const AIRTABLE_TOKEN = "patE2pSe0j0oZHfEk.8fc8ef7cca07724abe6f348aa413e6b69a1e1787752c14e42bc26e1326546e5a";
+const BASE_ID = 'appwTdrup8dT6Rgug';
+const TABLE_NAME = 'tbljboyQCh473N6JG'; // Your table name
 
 var titles = ["Advance to serve", "Title 2", "Title 3", "Title 4", "Title 5"];
 var images = ["img/Carousel/1.jpg", "img/Carousel/2.jpg", "img/Carousel/3.jpg", "img/Carousel/4.jpg", "img/Carousel/5.jpg"];
 var descriptions = ["Advance to serve", "cool", "nice", "why", "because"];
 
-
-const SHARE_ID = 'shrR8swNMBPisZlB3'; // Your share ID from the link
-const API_URL = `https://airtable.com/v0.3/view/${SHARE_ID}/read`;
-
 async function fetchCarouselData() {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(
+            `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`,
+            {
+                headers: {
+                    'Authorization': `Bearer ${AIRTABLE_TOKEN}`
+                }
+            }
+        );
+
         const data = await response.json();
+
+        console.log(data.records);
 
         // Clear arrays
         titles = [];
@@ -21,10 +27,10 @@ async function fetchCarouselData() {
         images = [];
 
         // Populate arrays from Airtable records
-        data.rows.forEach(row => {
-            titles.push(row.cellValuesByColumnId[data.columns[0].id]); // Title column
-            descriptions.push(row.cellValuesByColumnId[data.columns[1].id]); // Description column
-            images.push(row.cellValuesByColumnId[data.columns[2].id][0].url); // Image attachment URL
+        data.records.forEach(record => {
+            titles.push(record.fields.Title); // Title column
+            descriptions.push(record.fields.ImageDescription); // Description column
+            images.push(record.fields.Image[0].url); // Image attachment URL
         });
 
         console.log('Titles:', titles);

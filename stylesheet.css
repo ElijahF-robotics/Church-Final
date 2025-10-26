@@ -132,6 +132,11 @@ svg {
     background: linear-gradient(0deg, rgba(207, 77, 85, 0.00) 0%, #812028 100%);
 }
 
+.redToDarkRedGradient {
+    background: linear-gradient(90deg,rgba(235, 148, 148, 1) 0%, rgba(240, 91, 91, 1) 100%);
+}
+
+
 .glass {
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
