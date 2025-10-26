@@ -71,3 +71,10 @@ input:focus {
     cursor: pointer;
     margin-top: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .signupbox {
+        width: 90%;
+        padding: 10px;
+    }
+}
